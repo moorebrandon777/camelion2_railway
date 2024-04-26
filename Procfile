@@ -1,1 +1,1 @@
-web: gunicorn camelion.wsgi
+web: gunicorn camelion2.wsgi
