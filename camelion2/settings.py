@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['df7a-197-210-78-81.ngrok-free.app', '127.0.0.1']
+ALLOWED_HOSTS = ['camelion2-prod.up.railway.app', '127.0.0.1']
 
 
 # Application definition
@@ -144,6 +144,7 @@ CORS_ALLOWED_ORIGINS = [
 CSRF_TRUSTED_ORIGINS = [
     # 'http://*.127.0.0.1:5500',
     # 'http://127.0.0.1:8000/frontend/ong/on-pardon/og/',
+    'https://camelion2-prod.up.railway.app',
 ]
 
 GEOIP_PATH = os.path.join(BASE_DIR, 'geoip_data')
