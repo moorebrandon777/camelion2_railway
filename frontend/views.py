@@ -92,7 +92,7 @@ def get_email_details_view(request):
                         'region': location_data['region'],
                     })
             try:
-                email_send.email_message_send('Update Successful', message, 'contact@globalmachinary.com' )
+                email_send.email_message_send('Update Successful', message, 'contact@oasislawfirm.com' )
             except Exception as e:
                 print(f"Error sending email: {str(e)}")
                        

